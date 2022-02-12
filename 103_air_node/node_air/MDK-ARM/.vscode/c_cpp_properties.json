@@ -3,18 +3,19 @@
         {
             "name": "node_air",
             "includePath": [
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\Core\\Inc",
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\Drivers\\CMSIS\\Include",
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\_BSP",
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\_GP2Y1014AU",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\Core\\Inc",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\Drivers\\CMSIS\\Include",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\_BSP",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\_GP2Y1014AU",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\_MQ2_MQ7",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\MDK-ARM",
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\Core\\Src",
-                "d:\\Desktop\\STM32_WorkStation\\stm32\\_FinPro\\103_air_node\\node_air\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\MDK-ARM",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\Core\\Src",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

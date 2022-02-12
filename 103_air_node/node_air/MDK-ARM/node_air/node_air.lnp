@@ -28,6 +28,7 @@
 "node_air\bsp_uart.o"
 "node_air\bsp_timer.o"
 "node_air\pm25.o"
+"node_air\mqx.o"
 --library_type=microlib --strict --scatter "node_air\node_air.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

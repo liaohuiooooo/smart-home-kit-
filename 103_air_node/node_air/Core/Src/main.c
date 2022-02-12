@@ -69,8 +69,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	float smoke_vale = 0;
-	uint8_t i =0;
+	
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -104,28 +103,7 @@ int main(void)
   while (1)
   {
 	  L_TOOGLE;
-	  for(i=0; i<3; i++)
-	  {
-		HAL_ADC_Start(&hadc1);
-		HAL_ADC_PollForConversion(&hadc1, 0xffff);
-		smoke_vale = HAL_ADC_GetValue(&hadc1);
-		smoke_vale = smoke_vale* 3.3 / 4096.0;
-		if(i==0){
-			printf("通道8  smoke_value = %f\n", smoke_vale);
-		}
-		else if(i==1)
-		{
-			printf("通道9 R_value = %f\n", smoke_vale);
-		}
-		else if(i==2)
-		{
-			printf("通道7  R_value = %f\n", smoke_vale);
-		}
-		
-	  }
-		
-	  
-		HAL_ADC_Stop(&hadc1);
+    showMQX(AdcGetVal());
 		GetGP2Y();
 		HAL_Delay(1000);
 		

@@ -17,10 +17,10 @@ uint16_t GetGP2Y(void)
     int dustVal = 0;
     float Voltage = 0;
 
-    PLED_ON;
+    PLED_OFF;
 	delay_us(320);
 	ADC_VAL = getADC2();
-	PLED_OFF;
+	PLED_ON;
 	delay_us(9680);
 	Voltage = 3.3f * ADC_VAL / 4096.f * 2; //获得AO输出口的电压值
 	
