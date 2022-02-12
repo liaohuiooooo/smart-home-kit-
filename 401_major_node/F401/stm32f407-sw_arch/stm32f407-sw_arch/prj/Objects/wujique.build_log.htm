@@ -1,0 +1,914 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=HN0AE-5CCBT-VE2HA-1RNBA-YQS6A-LK0DJ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.33.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.32.12.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+C:\Users\liaohuiooooo\Desktop\F401\stm32f407-sw_arch\stm32f407-sw_arch\prj\wujique.uvprojx
+Project File Date:  02/09/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'wujique'
+assembling startup_stm32f40_41xxx.s...
+compiling misc.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_can.c...
+compiling wujique_sysconf.c...
+..\app\wujique_sysconf.c(101): warning:  #188-D: enumerated type mixed with another type
+  		.misoport = NULL,
+..\app\wujique_sysconf.c(219): warning:  #188-D: enumerated type mixed with another type
+  		.csport = NULL,
+..\app\wujique_sysconf.c(470): warning:  #223-D: function "dev_spiflash_register" declared implicitly
+  					dev_spiflash_register(&DevSpiFlashBoard);
+..\app\wujique_sysconf.c: 3 warnings, 0 errors
+compiling sys_littlefs.c...
+..\app\sys_littlefs.c(28): warning:  #223-D: function "dev_spiflash_read" declared implicitly
+  	dev_spiflash_read(node, block* c->block_size + off, size, buffer);
+..\app\sys_littlefs.c(49): warning:  #223-D: function "dev_spiflash_write" declared implicitly
+  	dev_spiflash_write(node, block* c->block_size + off, size, buffer);
+..\app\sys_littlefs.c(70): warning:  #223-D: function "dev_spiflash_erase" declared implicitly
+  	dev_spiflash_erase(node, block* c->block_size);
+..\app\sys_littlefs.c(145): warning:  #188-D: enumerated type mixed with another type
+      wjq_log(3, "boot_count: %d\r\n", boot_count);
+..\app\sys_littlefs.c(146): warning:  #940-D: missing return statement at end of non-void function "lfs_test" 
+  }
+..\app\sys_littlefs.c: 5 warnings, 0 errors
+compiling wujique_log.c...
+compiling sys_spiffs.c...
+..\app\sys_spiffs.c(71): warning:  #223-D: function "dev_spiflash_read" declared implicitly
+  	dev_spiflash_read(node, addr, size, dst);
+..\app\sys_spiffs.c(75): warning:  #940-D: missing return statement at end of non-void function "core_spiflash_spiffs_read" 
+  }
+..\app\sys_spiffs.c(93): warning:  #223-D: function "dev_spiflash_write" declared implicitly
+  	dev_spiflash_write(node, addr, size, src);
+..\app\sys_spiffs.c(96): warning:  #940-D: missing return statement at end of non-void function "core_spiflash_spiffs_write" 
+  }
+..\app\sys_spiffs.c(116): warning:  #223-D: function "dev_spiflash_erase" declared implicitly
+  	dev_spiflash_erase(node, addr);
+..\app\sys_spiffs.c(118): warning:  #940-D: missing return statement at end of non-void function "core_spiflash_spiffs_erase" 
+  }
+..\app\sys_spiffs.c(190): warning:  #1293-D: assignment in condition
+  	while ((pe = SPIFFS_readdir(&d, pe))) 
+..\app\sys_spiffs.c(235): warning:  #223-D: function "printf" declared implicitly
+      printf("errno %i\n", SPIFFS_errno(&fs));
+..\app\sys_spiffs.c: 8 warnings, 0 errors
+compiling main.c...
+..\app\main.c(124): warning:  #223-D: function "xTaskCreate" declared implicitly
+  	xTaskCreate(	(TaskFunction_t) start_task,
+..\app\main.c(126): warning:  #191-D: type qualifier is meaningless on cast type
+  					(const configSTACK_DEPTH_TYPE) START_TASK_STK_SIZE,
+..\app\main.c(185): warning:  #223-D: function "sys_dev_register" declared implicitly
+  	sys_dev_register();
+..\app\main.c(200): warning:  #223-D: function "mcu_adc_temprate_init" declared implicitly
+  	mcu_adc_temprate_init();
+..\app\main.c(201): warning:  #223-D: function "dev_htu21d_init" declared implicitly
+  	dev_htu21d_init();
+..\app\main.c(203): warning:  #223-D: function "fun_mount_sd" declared implicitly
+  	fun_mount_sd();
+..\app\main.c(214): warning:  #223-D: function "wujique_407test_init" declared implicitly
+  	wujique_407test_init();
+..\app\main.c: 7 warnings, 0 errors
+compiling wujique_stm407.c...
+..\app\wujique_stm407.c(250): warning:  #223-D: function "dev_lcd_show_bmp" declared implicitly
+  						dev_lcd_show_bmp(lcd, 1, 1, 240, 240, "1:/pic/pic128.bmp");
+..\app\wujique_stm407.c(300): warning:  #223-D: function "dev_lcd_show_bmp" declared implicitly
+  	dev_lcd_show_bmp(lcd, 1, 1, 320, 240, "1:/pic/女人单色.bmp");
+..\app\wujique_stm407.c(283): warning:  #177-D: variable "step"  was declared but never referenced
+  	u8 step = 0;
+..\app\wujique_stm407.c(284): warning:  #177-D: variable "dis"  was declared but never referenced
+  	u8 dis = 1;
+..\app\wujique_stm407.c(364): warning:  #223-D: function "dev_wm8978_inout" declared implicitly
+  	dev_wm8978_inout(WM8978_INPUT_DAC|WM8978_INPUT_AUX|WM8978_INPUT_ADC,
+..\app\wujique_stm407.c(408): warning:  #223-D: function "fun_sound_get_sta" declared implicitly
+  		if(SOUND_IDLE == fun_sound_get_sta())
+..\app\wujique_stm407.c(447): warning:  #223-D: function "ts_calibrate" declared implicitly
+  		ts_calibrate(lcd);
+..\app\wujique_stm407.c(587): warning:  #223-D: function "dev_camera_open" declared implicitly
+  		if(-1 == dev_camera_open())
+..\app\wujique_stm407.c(592): warning:  #223-D: function "dev_camera_show" declared implicitly
+  		dev_camera_show(lcd);
+..\app\wujique_stm407.c(595): warning:  #223-D: function "dev_camera_close" declared implicitly
+  		dev_camera_close();
+..\app\wujique_stm407.c(738): warning:  #223-D: function "dev_8266_write" declared implicitly
+  		dev_8266_write("at\r\n", 4);
+..\app\wujique_stm407.c(744): warning:  #223-D: function "dev_8266_read" declared implicitly
+  			len = dev_8266_read(buf, sizeof(buf));
+..\app\wujique_stm407.c(774): warning:  #223-D: function "dev_spiflash_test_chipcheck" declared implicitly
+  	dev_spiflash_test_chipcheck("board_spiflash");
+..\app\wujique_stm407.c(783): warning:  #223-D: function "dev_spiflash_test_chiperase" declared implicitly
+  	dev_spiflash_test_chiperase("core_spiflash");
+..\app\wujique_stm407.c(1352): warning:  #223-D: function "xTaskCreate" declared implicitly
+  	xTaskCreate(	(TaskFunction_t) wujique_stm407_test,
+..\app\wujique_stm407.c(1354): warning:  #191-D: type qualifier is meaningless on cast type
+  					(const configSTACK_DEPTH_TYPE) Wujique407_TASK_STK_SIZE,
+..\app\wujique_stm407.c(1402): warning:  #223-D: function "dev_lcd_show_bmp" declared implicitly
+  						dev_lcd_show_bmp(lcd, 1, 1, 320, 240, "1:/pic/女人单色.bmp");
+..\app\wujique_stm407.c(1470): warning:  #111-D: statement is unreachable
+  	return 0;
+..\app\wujique_stm407.c(1446): warning:  #177-D: variable "step"  was declared but never referenced
+  	u8 step = 0;
+..\app\wujique_stm407.c(1447): warning:  #177-D: variable "dis"  was declared but never referenced
+  	u8 dis = 1;
+..\app\wujique_stm407.c(1490): warning:  #223-D: function "ts_calibrate" declared implicitly
+  		ts_calibrate(lcd);
+..\app\wujique_stm407.c(1530): warning:  #111-D: statement is unreachable
+  		dev_touchscreen_close();
+..\app\wujique_stm407.c: 22 warnings, 0 errors
+compiling stm32f4xx_it.c...
+..\app\stm32f4xx_it.c(416): warning:  #223-D: function "mcu_dcmi_frame_process" declared implicitly
+  		mcu_dcmi_frame_process();
+..\app\stm32f4xx_it.c(425): warning:  #223-D: function "mcu_dcmi_dma_process" declared implicitly
+  		 mcu_dcmi_dma_process();
+..\app\stm32f4xx_it.c: 2 warnings, 0 errors
+compiling stm32f4xx_crc.c...
+compiling stm32f4xx_cec.c...
+compiling stm32f4xx_cryp_tdes.c...
+compiling stm32f4xx_dbgmcu.c...
+compiling stm32f4xx_cryp_des.c...
+compiling stm32f4xx_cryp.c...
+compiling stm32f4xx_dac.c...
+compiling stm32f4xx_dcmi.c...
+compiling stm32f4xx_cryp_aes.c...
+compiling stm32f4xx_dfsdm.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_dma2d.c...
+compiling stm32f4xx_dsi.c...
+compiling stm32f4xx_flash_ramfunc.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_fmpi2c.c...
+compiling stm32f4xx_hash.c...
+compiling stm32f4xx_fsmc.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_hash_sha1.c...
+compiling stm32f4xx_hash_md5.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_pwr.c...
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_qspi.c...
+compiling stm32f4xx_iwdg.c...
+compiling stm32f4xx_lptim.c...
+compiling stm32f4xx_ltdc.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_sdio.c...
+compiling stm32f4xx_sai.c...
+compiling stm32f4xx_rng.c...
+compiling stm32f4xx_rtc.c...
+compiling stm32f4xx_spdifrx.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_wwdg.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_spi.c...
+compiling stm324xg_eval_fsmc_sram.c...
+compiling mcu_uart.c...
+compiling mcu_timer.c...
+compiling mcu_dac.c...
+compiling mcu_i2c.c...
+..\mcu_dev\mcu_i2c.c(439): warning:  #223-D: function "strcmp" declared implicitly
+  		if(strcmp(dev->name, p->dev.name) == 0)
+..\mcu_dev\mcu_i2c.c(458): warning:  #223-D: function "memcpy" declared implicitly
+  	memcpy((u8 *)&p->dev, (u8 *)dev, sizeof(DevI2c));
+..\mcu_dev\mcu_i2c.c(496): warning:  #223-D: function "strcmp" declared implicitly
+  		if(strcmp(name, node->dev.name) == 0)
+..\mcu_dev\mcu_i2c.c: 3 warnings, 0 errors
+compiling stm32f4xx_tim.c...
+compiling mcu_sdio.c...
+compiling mcu_i2s.c...
+compiling mcu_bsp_stm32.c...
+compiling mcu_adc.c...
+compiling mcu_can.c...
+compiling mcu_dcmi.c...
+compiling mcu_rtc.c...
+compiling dev_buzzer.c...
+compiling dev_key.c...
+compiling mcu_spi.c...
+..\mcu_dev\mcu_spi.c(116): warning:  #223-D: function "log2" declared implicitly
+  	pinsource = log2(dev->clkpin);
+..\mcu_dev\mcu_spi.c(81): warning:  #177-D: variable "SPI_InitStruct"  was declared but never referenced
+      SPI_InitTypeDef SPI_InitStruct;
+..\mcu_dev\mcu_spi.c(768): warning:  #940-D: missing return statement at end of non-void function "mcu_spi_transfer" 
+  }
+..\mcu_dev\mcu_spi.c: 3 warnings, 0 errors
+compiling dev_touchkey.c...
+compiling dev_dacsound.c...
+compiling dev_tea5767.c...
+compiling dev_wm8978.c...
+compiling dev_xpt2046.c...
+compiling dev_spiflash.c...
+..\board_dev\dev_spiflash.c(647): warning:  #177-D: variable "i"  was declared but never referenced
+      u8 i = 1;
+..\board_dev\dev_spiflash.c(649): warning:  #177-D: variable "wbuf"  was declared but never referenced
+      u8 *wbuf;
+..\board_dev\dev_spiflash.c: 2 warnings, 0 errors
+compiling dcmi_ov9655.c...
+..\board_dev\dcmi_ov9655.c(395): warning:  #177-D: variable "DCMI_InitStructure"  was declared but never referenced
+  	DCMI_InitTypeDef DCMI_InitStructure;
+..\board_dev\dcmi_ov9655.c: 1 warning, 0 errors
+compiling dev_touchscreen.c...
+compiling dev_rs485.c...
+compiling dcmi_ov2640.c...
+compiling stm324xg_eval_sdio_sd.c...
+compiling camera_api.c...
+..\board_dev\camera_api.c(115): warning:  #940-D: missing return statement at end of non-void function "dev_camera_fresh" 
+  }
+..\board_dev\camera_api.c(128): warning:  #940-D: missing return statement at end of non-void function "dev_camera_stop" 
+  }
+..\board_dev\camera_api.c(262): warning:  #223-D: function "mcu_dcmi_get_sta" declared implicitly
+  		mcu_dcmi_get_sta(&sta);
+..\board_dev\camera_api.c(267): warning:  #223-D: function "dev_lcd_flush" declared implicitly
+  			dev_lcd_flush(lcd, camera_buf0, LCD_BUF_SIZE/2);
+..\board_dev\camera_api.c(272): warning:  #223-D: function "dev_lcd_flush" declared implicitly
+  			dev_lcd_flush(lcd, camera_buf1, LCD_BUF_SIZE/2);
+..\board_dev\camera_api.c(284): warning:  #111-D: statement is unreachable
+  	return 0;
+..\board_dev\camera_api.c(221): warning:  #177-D: variable "abuffer"  was declared but never referenced
+  	uint8_t abuffer[40];
+..\board_dev\camera_api.c(222): warning:  #177-D: variable "ret"  was declared but never referenced
+    	s32 ret;
+..\board_dev\camera_api.c: 8 warnings, 0 errors
+compiling dev_htu21d.c...
+..\board_dev\dev_htu21d.c(113): warning:  #223-D: function "Delay" declared implicitly
+  		Delay(5);
+..\board_dev\dev_htu21d.c: 1 warning, 0 errors
+compiling dev_keypad.c...
+compiling dev_esp8266.c...
+compiling dev_rf24l01.c...
+..\board_dev\dev_rf24l01.c(189): warning:  #550-D: variable "cmd"  was set but never used
+  	u8 cmd[2];
+..\board_dev\dev_rf24l01.c(190): warning:  #177-D: variable "res"  was declared but never referenced
+  	s32 res;
+..\board_dev\dev_rf24l01.c(222): warning:  #177-D: variable "tmp"  was declared but never referenced
+  	u8 tmp = reg;
+..\board_dev\dev_rf24l01.c(239): warning:  #550-D: variable "tmp"  was set but never used
+  	u8 tmp;
+..\board_dev\dev_rf24l01.c(490): warning:  #177-D: variable "buf"  was declared but never referenced
+  	u8 buf[32];
+..\board_dev\dev_rf24l01.c: 5 warnings, 0 errors
+compiling dev_IL91874.c...
+..\board_dev\lcd\dev_IL91874.c(146): warning:  #940-D: missing return statement at end of non-void function "drv_il91874_write_cmd" 
+  }
+..\board_dev\lcd\dev_IL91874.c(153): warning:  #940-D: missing return statement at end of non-void function "drv_il91874_write_data" 
+  }
+..\board_dev\lcd\dev_IL91874.c(194): warning:  #940-D: missing return statement at end of non-void function "drv_IL91874_set_cp_addr" 
+  }
+..\board_dev\lcd\dev_IL91874.c(213): warning:  #177-D: variable "i"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_IL91874.c(213): warning:  #177-D: variable "j"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_IL91874.c(214): warning:  #177-D: variable "data"  was declared but never referenced
+  	u8 data;
+..\board_dev\lcd\dev_IL91874.c(215): warning:  #177-D: variable "w"  was declared but never referenced
+  	u16 w,l;
+..\board_dev\lcd\dev_IL91874.c(215): warning:  #177-D: variable "l"  was declared but never referenced
+  	u16 w,l;
+..\board_dev\lcd\dev_IL91874.c(366): warning:  #177-D: variable "data"  was declared but never referenced
+  	u16 data;
+..\board_dev\lcd\dev_IL91874.c(369): warning:  #177-D: variable "testbuf"  was declared but never referenced
+  	u8 testbuf[2];
+..\board_dev\lcd\dev_IL91874.c(619): warning:  #550-D: variable "ylen"  was set but never used
+  	u16 xlen,ylen;
+..\board_dev\lcd\dev_IL91874.c: 11 warnings, 0 errors
+compiling dev_lcdbus.c...
+..\board_dev\lcd\dev_lcdbus.c(542): warning:  #223-D: function "mcu_fsmc_lcd_Init" declared implicitly
+  		mcu_fsmc_lcd_Init();
+..\board_dev\lcd\dev_lcdbus.c: 1 warning, 0 errors
+compiling dev_ILI9325.c...
+..\board_dev\lcd\dev_ILI9325.c(611): warning:  #177-D: variable "i"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_ILI9325.c(611): warning:  #177-D: variable "j"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_ILI9325.c(676): warning:  #177-D: variable "i"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_ILI9325.c(676): warning:  #177-D: variable "j"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_ILI9325.c: 4 warnings, 0 errors
+compiling dev_st7789.c...
+..\board_dev\lcd\dev_st7789.c(89): warning:  #177-D: variable "regval"  was declared but never referenced
+  	u16 regval=0;
+..\board_dev\lcd\dev_st7789.c(217): warning:  #177-D: variable "data"  was declared but never referenced
+  	u16 data;
+..\board_dev\lcd\dev_st7789.c: 2 warnings, 0 errors
+compiling dev_st7735r.c...
+..\board_dev\lcd\dev_st7735r.c(87): warning:  #177-D: variable "regval"  was declared but never referenced
+  	u16 regval=0;
+..\board_dev\lcd\dev_st7735r.c(215): warning:  #177-D: variable "data"  was declared but never referenced
+  	u16 data;
+..\board_dev\lcd\dev_st7735r.c: 2 warnings, 0 errors
+compiling dev_ILI9341.c...
+..\board_dev\lcd\dev_ILI9341.c(465): warning:  #177-D: variable "i"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_ILI9341.c(465): warning:  #177-D: variable "j"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_ILI9341.c(530): warning:  #177-D: variable "i"  was declared but never referenced
+  	u32 i,j;
+..\board_dev\lcd\dev_ILI9341.c(530): warning:  #177-D: variable "j"  was declared but never referenced
+  	u32 i,j;
+..\board_dev\lcd\dev_ILI9341.c: 4 warnings, 0 errors
+compiling dev_lcd.c...
+..\board_dev\lcd\dev_lcd.c(453): warning:  #223-D: function "abs" declared implicitly
+  	if (abs (dx) < abs (dy)) 
+..\board_dev\lcd\dev_lcd.c(689): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			res = font_get_hz(font, s+sidx, dotbuf);//从SD卡读取一个1616汉字的点阵要1ms
+..\board_dev\lcd\dev_lcd.c(627): warning:  #550-D: variable "res"  was set but never used
+  	s32 res;
+..\board_dev\lcd\dev_lcd.c(840): warning:  #167-D: argument of type "s8 *" is incompatible with parameter of type "const TCHAR *"
+  	res = f_open(&bmpfile, BmpFileName, FA_READ);
+..\board_dev\lcd\dev_lcd.c(824): warning:  #550-D: variable "ImgSize"  was set but never used
+      u32 ImgSize;
+..\board_dev\lcd\dev_lcd.c: 5 warnings, 0 errors
+compiling font_8x8.c...
+compiling font_8x16.c...
+compiling font.c...
+..\Utilities\font\font.c(241): warning:  #223-D: function "memcpy" declared implicitly
+  	memcpy(buf, fp, FontAscList[type]->size);
+..\Utilities\font\font.c: 1 warning, 0 errors
+compiling font_6x12.c...
+compiling ts_close.c...
+compiling alloc.c...
+..\Utilities\alloc\alloc.c(246): warning:  #111-D: statement is unreachable
+  			return NULL;
+..\Utilities\alloc\alloc.c(285): warning:  #223-D: function "memset" declared implicitly
+  		memset((char*) p, 0, n*size);
+..\Utilities\alloc\alloc.c(329): warning:  #223-D: function "memcpy" declared implicitly
+  	memcpy(bp, ap, newsize);
+..\Utilities\alloc\alloc.c(292): warning:  #177-D: variable "p"  was declared but never referenced
+  	ALLOC_HDR*bp, *p, *np;
+..\Utilities\alloc\alloc.c(292): warning:  #177-D: variable "np"  was declared but never referenced
+  	ALLOC_HDR*bp, *p, *np;
+..\Utilities\alloc\alloc.c(295): warning:  #177-D: variable "aunits"  was declared but never referenced
+  	unsigned aunits;
+..\Utilities\alloc\alloc.c(398): warning:  #223-D: function "memset" declared implicitly
+  	memset(p, 0xf0, 1024);
+..\Utilities\alloc\alloc.c: 7 warnings, 0 errors
+compiling dev_IL3820.c...
+..\board_dev\lcd\dev_IL3820.c(128): warning:  #940-D: missing return statement at end of non-void function "drv_il3820_write_cmd" 
+  }
+..\board_dev\lcd\dev_IL3820.c(135): warning:  #940-D: missing return statement at end of non-void function "drv_il3820_write_data" 
+  }
+..\board_dev\lcd\dev_IL3820.c(176): warning:  #940-D: missing return statement at end of non-void function "drv_IL3820_set_cp_addr" 
+  }
+..\board_dev\lcd\dev_IL3820.c(209): warning:  #223-D: function "drv_il91874_write_cmd" declared implicitly
+  	drv_il91874_write_cmd(node, (0x24));
+..\board_dev\lcd\dev_IL3820.c(211): warning:  #223-D: function "drv_il91874_write_data" declared implicitly
+  		drv_il91874_write_data(node, (u8 *)&drvdata->bgram[cnt], 1);
+..\board_dev\lcd\dev_IL3820.c(195): warning:  #177-D: variable "i"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_IL3820.c(195): warning:  #177-D: variable "j"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_IL3820.c(197): warning:  #177-D: variable "w"  was declared but never referenced
+  	u16 w,l;
+..\board_dev\lcd\dev_IL3820.c(197): warning:  #177-D: variable "l"  was declared but never referenced
+  	u16 w,l;
+..\board_dev\lcd\dev_IL3820.c(317): warning:  #177-D: variable "tmp"  was declared but never referenced
+  	u8 tmp[16];
+..\board_dev\lcd\dev_IL3820.c(337): warning:  #177-D: variable "data"  was declared but never referenced
+  	u16 data;
+..\board_dev\lcd\dev_IL3820.c(340): warning:  #177-D: variable "testbuf"  was declared but never referenced
+  	u8 testbuf[2];
+..\board_dev\lcd\dev_IL3820.c(602): warning:  #550-D: variable "ylen"  was set but never used
+  	u16 xlen,ylen;
+..\board_dev\lcd\dev_IL3820.c: 13 warnings, 0 errors
+compiling dev_str7565.c...
+..\board_dev\lcd\dev_str7565.c(423): warning:  #550-D: variable "ylen"  was set but never used
+  	u16 xlen,ylen;
+..\board_dev\lcd\dev_str7565.c(527): warning:  #177-D: variable "i"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_str7565.c(527): warning:  #177-D: variable "j"  was declared but never referenced
+  	u16 i,j;
+..\board_dev\lcd\dev_str7565.c: 3 warnings, 0 errors
+compiling ts_attach.c...
+compiling ts_config.c...
+compiling audio_sample.c...
+compiling ts_fd.c...
+compiling ts_load_module.c...
+compiling ts_open.c...
+compiling ts_parse_vars.c...
+..\Utilities\tslib\src\ts_parse_vars.c(42): warning:  #223-D: function "strsep" declared implicitly
+  	while ((p = (char *)strsep(&s, " \t")) != NULL && ret == 0) 
+..\Utilities\tslib\src\ts_parse_vars.c: 1 warning, 0 errors
+compiling ts_read.c...
+compiling ts_read_raw.c...
+compiling pthres.c...
+compiling dejitter.c...
+compiling linear.c...
+compiling stm32-raw.c...
+compiling variance.c...
+compiling testutils.c...
+compiling ts_calibrate.c...
+..\Utilities\tslib\tests\ts_calibrate.c(47): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          n += 1.0;
+..\Utilities\tslib\tests\ts_calibrate.c(56): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      if (det < 0.1 && det > -0.1)
+..\Utilities\tslib\tests\ts_calibrate.c: 2 warnings, 0 errors
+compiling usbd_storage_msd.c...
+compiling usb_bsp.c...
+compiling usbd_desc.c...
+compiling usbd_usr.c...
+compiling usb_hcd.c...
+compiling usb_dcd_int.c...
+compiling usbh_msc_usr.c...
+compiling usb_hcd_int.c...
+compiling dual_func_demo.c...
+..\app\usb\src\dual_func_demo.c(872): warning:  #223-D: function "xTaskCreate" declared implicitly
+  	xTaskCreate(	(TaskFunction_t) usb_main,
+..\app\usb\src\dual_func_demo.c(874): warning:  #191-D: type qualifier is meaningless on cast type
+  					(const configSTACK_DEPTH_TYPE) USB_TASK_STK_SIZE,
+..\app\usb\src\dual_func_demo.c: 2 warnings, 0 errors
+compiling usbh_ioreq.c...
+compiling usb_dcd.c...
+compiling usbh_hcs.c...
+compiling usbh_stdreq.c...
+compiling usbh_core.c...
+compiling usb_core.c...
+compiling usbh_msc_core.c...
+compiling usbd_core.c...
+compiling usbh_msc_bot.c...
+compiling usbh_msc_fatfs.c...
+compiling usbh_msc_scsi.c...
+compiling diskio.c...
+compiling syscall.c...
+..\Utilities\fat_fs\src\option\syscall.c(13): warning:  #9-D: nested comment is not allowed
+  /*------------------------------------------------------------------------*/
+..\Utilities\fat_fs\src\option\syscall.c: 1 warning, 0 errors
+compiling cc936.c...
+compiling ff.c...
+compiling tcp_echoserver.c...
+compiling usbd_ioreq.c...
+compiling usbd_msc_core.c...
+compiling usbd_req.c...
+compiling usbd_msc_data.c...
+compiling usbd_msc_scsi.c...
+compiling usbd_msc_bot.c...
+compiling api_lib.c...
+compiling api_msg.c...
+compiling eth_app.c...
+compiling err.c...
+compiling netbuf.c...
+compiling netdb.c...
+compiling netifapi.c...
+compiling sockets.c...
+compiling tcpip.c...
+compiling netconf.c...
+compiling def.c...
+compiling dns.c...
+compiling mem.c...
+compiling init.c...
+compiling dhcp.c...
+compiling memp.c...
+compiling netif.c...
+compiling pbuf.c...
+compiling raw.c...
+compiling stats.c...
+compiling sys.c...
+compiling stm32f4x7_eth_bsp.c...
+compiling stm32f4x7_eth.c...
+compiling autoip.c...
+compiling tcp.c...
+compiling timers.c...
+compiling igmp.c...
+compiling tcp_in.c...
+compiling udp.c...
+compiling icmp.c...
+compiling etharp.c...
+compiling tcp_out.c...
+..\Utilities\lwip-1.4.1\src\core\tcp_out.c(845): warning:  #550-D: variable "tcphdr"  was set but never used
+    struct tcp_hdr *tcphdr;
+..\Utilities\lwip-1.4.1\src\core\tcp_out.c(1367): warning:  #550-D: variable "tcphdr"  was set but never used
+    struct tcp_hdr *tcphdr;
+..\Utilities\lwip-1.4.1\src\core\tcp_out.c: 2 warnings, 0 errors
+compiling inet.c...
+compiling inet_chksum.c...
+compiling ip_addr.c...
+compiling ip.c...
+compiling ip_frag.c...
+compiling frtos_croutine.c...
+compiling frtos_event_groups.c...
+compiling frtos_list.c...
+compiling frtos_stream_buffer.c...
+compiling frtos_queue.c...
+compiling frtos_timers.c...
+..\Utilities\FreeRTOS\Source\frtos_timers.c(258): warning:  #223-D: function "xTaskCreate" declared implicitly
+  			xReturn = xTaskCreate(	prvTimerTask,
+..\Utilities\FreeRTOS\Source\frtos_timers.c: 1 warning, 0 errors
+compiling frtos_tasks.c...
+compiling maths.c...
+compiling emenu.c...
+..\function\emenu.c(84): warning:  #188-D: enumerated type mixed with another type
+  	MenuLel now_lel = 0;//当前菜单等级
+..\function\emenu.c(229): warning:  #223-D: function "strlen" declared implicitly
+  	disx = (menu_ctrl.lcdw - strlen(menu_ctrl.fa->cha)*menu_ctrl.fontw)/2;//居中显示
+..\function\emenu.c(259): warning:  #223-D: function "memset" declared implicitly
+  						memset(disbuf,0,sizeof(disbuf));
+..\function\emenu.c(264): warning:  #223-D: function "sprintf" declared implicitly
+  							sprintf(disbuf, ">%d.", menu_num);
+..\function\emenu.c(268): warning:  #223-D: function "sprintf" declared implicitly
+  							sprintf(disbuf, "%d.", menu_num);	
+..\function\emenu.c(270): warning:  #223-D: function "strcat" declared implicitly
+  						strcat(disbuf, p->cha + lang);
+..\function\emenu.c(297): warning:  #1182-D: a declaration cannot have a label
+  			u8 col2_dis_num;
+..\function\emenu.c(334): warning:  #223-D: function "memset" declared implicitly
+  					memset(disbuf,0,sizeof(disbuf));
+..\function\emenu.c(335): warning:  #223-D: function "sprintf" declared implicitly
+  					sprintf(disbuf, "%d.", menu_num);	
+..\function\emenu.c(336): warning:  #223-D: function "strcat" declared implicitly
+  					strcat(disbuf, p->cha + lang);
+..\function\emenu.c(516): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "i"  (declared at line 529)
+  	switch(key)
+  	^
+..\function\emenu.c(662): warning:  #223-D: function "font_get_hw" declared implicitly
+  	font_get_hw(font, &(menu_ctrl.fonth), &(menu_ctrl.fontw));
+..\function\emenu.c: 12 warnings, 0 errors
+compiling soundplay.c...
+..\function\soundplay.c(269): warning:  #223-D: function "strcmp" declared implicitly
+  	if(0 == strcmp(dev, "wm8978"))
+..\function\soundplay.c(297): warning:  #223-D: function "strcmp" declared implicitly
+  	if(0 == strcmp(dev, "wm8978"))
+..\function\soundplay.c(300): warning:  #223-D: function "dev_wm8978_inout" declared implicitly
+  		dev_wm8978_inout(WM8978_INPUT_DAC|WM8978_INPUT_AUX|WM8978_INPUT_ADC,
+..\function\soundplay.c(332): warning:  #550-D: variable "res"  was set but never used
+  	FRESULT res;
+..\function\soundplay.c(625): warning:  #223-D: function "dev_wm8978_inout" declared implicitly
+  	dev_wm8978_inout(WM8978_INPUT_DAC|WM8978_INPUT_AUX|WM8978_INPUT_ADC|WM8978_INPUT_LMIC|WM8978_INPUT_RMIC,
+..\function\soundplay.c: 5 warnings, 0 errors
+compiling list.c...
+compiling emenu_test.c...
+compiling port.c...
+compiling ethernetif.c...
+compiling cmd_nvedit.c...
+..\Utilities\cmd\cmd_nvedit.c(96): warning:  #223-D: function "strchr" declared implicitly
+  	if (strchr(name, '=')) {
+..\Utilities\cmd\cmd_nvedit.c(97): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		printf ("## Error: illegal character '=' in variable name \"%s\"\n", name);
+..\Utilities\cmd\cmd_nvedit.c(131): warning:  #223-D: function "strlen" declared implicitly
+  	len = strlen(name) + 2;
+..\Utilities\cmd\cmd_nvedit.c(137): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		printf ("## Error: environment overflow, \"%s\" deleted\n", name);
+..\Utilities\cmd\cmd_nvedit.c(162): warning:  #223-D: function "strcmp" declared implicitly
+  	if (strcmp(argv[1],"ethaddr") == 0)
+..\Utilities\cmd\cmd_nvedit.c(84): warning:  #550-D: variable "oldval"  was set but never used
+  	int   i, len, oldval;
+..\Utilities\cmd\cmd_nvedit.c(281): warning:  #223-D: function "puts" declared implicitly
+  					puts(buf);
+..\Utilities\cmd\cmd_nvedit.c(289): warning:  #223-D: function "puts" declared implicitly
+  				puts(buf);
+..\Utilities\cmd\cmd_nvedit.c(324): warning:  #1295-D: Deprecated declaration get_default_env_size - give arg types
+  extern int get_default_env_size();
+..\Utilities\cmd\cmd_nvedit.c(359): warning:  #223-D: function "strchr" declared implicitly
+                  p2 = (char *)strchr(p1, '=');
+..\Utilities\cmd\cmd_nvedit.c(368): warning:  #223-D: function "memcpy" declared implicitly
+                      memcpy(name,p1,p2-p1);
+..\Utilities\cmd\cmd_nvedit.c(369): warning:  #223-D: function "strcpy" declared implicitly
+                      strcpy(value,(char * )(p2+1));
+..\Utilities\cmd\cmd_nvedit.c(401): warning:  #223-D: function "memset" declared implicitly
+          memset(name,0,sizeof(name));
+..\Utilities\cmd\cmd_nvedit.c(422): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+      printf("recover %d environment variables \n",flag);
+..\Utilities\cmd\cmd_nvedit.c(261): warning:  #177-D: function "printenv"  was declared but never referenced
+  static int printenv(char *name, int state)
+..\Utilities\cmd\cmd_nvedit.c: 15 warnings, 0 errors
+compiling cmd_sys.c...
+..\Utilities\cmd\cmd_sys.c(30): warning:  #223-D: function "strncmp" declared implicitly
+  	if(strncmp(argv[1],"feedon",6) == 0)
+..\Utilities\cmd\cmd_sys.c(32): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		printf ("watch dog init  feedon !\n");
+..\Utilities\cmd\cmd_sys.c(41): warning:  #223-D: function "Delay" declared implicitly
+  			Delay(10);
+..\Utilities\cmd\cmd_sys.c(24): warning:  #550-D: variable "wtd_feed"  was set but never used
+  	int wtd_feed = 0;	
+..\Utilities\cmd\cmd_sys.c(67): warning:  #223-D: function "Time_Get_LocalTime" declared implicitly
+  	uint32 ticks = Time_Get_LocalTime();//OS_CPU_SysUpTime();//get_system_ticks();
+..\Utilities\cmd\cmd_sys.c(71): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  	printf("COMPILE DATE: %s - %s \r\n",__DATE__,__TIME__);
+..\Utilities\cmd\cmd_sys.c(93): warning:  #223-D: function "mcu_tempreate_get_tempreate" declared implicitly
+  	temp = mcu_tempreate_get_tempreate();
+..\Utilities\cmd\cmd_sys.c(129): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  				printf("ADDR: 0X%08X  VALUE: 0X%08X \n",(addr+data_wd*i),
+..\Utilities\cmd\cmd_sys.c(162): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  				printf("==== ERROR====\n");
+..\Utilities\cmd\cmd_sys.c(176): warning:  #223-D: function "strchr" declared implicitly
+  	s = (char *)strchr(cmd, '.');
+..\Utilities\cmd\cmd_sys.c(179): warning:  #223-D: function "strcmp" declared implicitly
+  	if(!s || !strcmp(s, ".read"))
+..\Utilities\cmd\cmd_sys.c(186): warning:  #223-D: function "strtoul" declared implicitly
+  		addr = strtoul(argv[1], NULL, 16);
+..\Utilities\cmd\cmd_sys.c(190): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			printf("Address 0x%X not %d byte%s aligned\n",
+..\Utilities\cmd\cmd_sys.c(203): warning:  #223-D: function "strtoul" declared implicitly
+  		addr = strtoul(argv[1], NULL, 16);
+..\Utilities\cmd\cmd_sys.c(208): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			printf("Address 0x%X not %d byte%s aligned\n",
+..\Utilities\cmd\cmd_sys.c(221): warning:  #223-D: function "strtoul" declared implicitly
+  		addr = strtoul(argv[1], NULL, 16);
+..\Utilities\cmd\cmd_sys.c(226): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			printf("Address 0x%X not %d byte%s aligned\n",
+..\Utilities\cmd\cmd_sys.c: 17 warnings, 0 errors
+compiling cmd.c...
+..\Utilities\cmd\cmd.c(112): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  	printf("cmd addr:%08x, limit:%08x\r\n", cmd_addr, cmd_end);
+..\Utilities\cmd\cmd.c(149): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy (lastcommand, console_buffer);
+..\Utilities\cmd\cmd.c(158): warning:  #223-D: function "puts" declared implicitly
+  			puts ("<INTERRUPT>\r\n");
+..\Utilities\cmd\cmd.c(103): warning:  #177-D: variable "s"  was declared but never referenced
+  	char *s;
+..\Utilities\cmd\cmd.c(104): warning:  #177-D: variable "bootdelay"  was declared but never referenced
+  	int bootdelay;
+..\Utilities\cmd\cmd.c(244): warning:  #223-D: function "strcpy" declared implicitly
+  	strcpy(hist_list[hist_add_idx], line);
+..\Utilities\cmd\cmd.c(361): warning:  #223-D: function "memmove" declared implicitly
+  			memmove(&buf[*num+1], &buf[*num], wlen-1);
+..\Utilities\cmd\cmd.c(365): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		putnstr(buf + *num, wlen);
+..\Utilities\cmd\cmd.c(374): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		putnstr(buf + *num, wlen);
+..\Utilities\cmd\cmd.c(473): warning:  #223-D: function "puts" declared implicitly
+  				puts("impossible condition #876\n");
+..\Utilities\cmd\cmd.c(500): warning:  #223-D: function "memmove" declared implicitly
+  					memmove(&buf[num], &buf[num+1], wlen);
+..\Utilities\cmd\cmd.c(501): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  					putnstr(buf + num, wlen);
+..\Utilities\cmd\cmd.c(515): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			REFRESH_TO_EOL();
+..\Utilities\cmd\cmd.c(531): warning:  #223-D: function "memmove" declared implicitly
+  				memmove(&buf[num], &buf[num+1], wlen);
+..\Utilities\cmd\cmd.c(533): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  				putnstr(buf + num, wlen);
+..\Utilities\cmd\cmd.c(566): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(buf, hline);
+..\Utilities\cmd\cmd.c(567): warning:  #223-D: function "strlen" declared implicitly
+  			eol_num = strlen(buf);
+..\Utilities\cmd\cmd.c(568): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			REFRESH_TO_EOL();
+..\Utilities\cmd\cmd.c(582): warning:  #223-D: function "strlen" declared implicitly
+  			col = strlen(prompt) + eol_num;
+..\Utilities\cmd\cmd.c(392): warning:  #550-D: variable "rlen"  was set but never used
+  	unsigned long rlen;
+..\Utilities\cmd\cmd.c(647): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		printf("cmd hist init\r\n");
+..\Utilities\cmd\cmd.c(650): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		puts (prompt);
+..\Utilities\cmd\cmd.c(665): warning:  #223-D: function "strlen" declared implicitly
+  		plen = strlen (prompt);
+..\Utilities\cmd\cmd.c(666): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		puts (prompt);
+..\Utilities\cmd\cmd.c(681): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			puts ("\r\n");
+..\Utilities\cmd\cmd.c(749): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			puts (erase_seq);
+..\Utilities\cmd\cmd.c(754): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  				puts (tab_seq+((*colp) & 07));
+..\Utilities\cmd\cmd.c(762): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		puts (erase_seq);
+..\Utilities\cmd\cmd.c(811): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  	printf ("** Too many args (max. %d) **\r\n", CONFIG_SYS_MAXARGS);
+..\Utilities\cmd\cmd.c(825): warning:  #223-D: function "strlen" declared implicitly
+  	int inputcnt = strlen (input);
+..\Utilities\cmd\cmd.c(896): warning:  #223-D: function "cmd_getenv" declared implicitly
+  				envval = (char *)cmd_getenv (envname);
+..\Utilities\cmd\cmd.c(973): warning:  #223-D: function "strlen" declared implicitly
+  	if (strlen(cmd) >= CONFIG_SYS_CBSIZE) {
+..\Utilities\cmd\cmd.c(974): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		puts ("## Command too long!\r\n");
+..\Utilities\cmd\cmd.c(978): warning:  #223-D: function "strcpy" declared implicitly
+  	strcpy (cmdbuf, cmd);
+..\Utilities\cmd\cmd.c(1030): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			printf ("Unknown command '%s' - try 'help'\r\n", argv[0]);
+..\Utilities\cmd\cmd.c(1073): warning:  #223-D: function "cmd_getenv" declared implicitly
+  		if ((arg = (char *)cmd_getenv (argv[i])) == NULL) {
+..\Utilities\cmd\cmd.c(1074): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			printf ("## Error: \"%s\" not defined\n", argv[i]);
+..\Utilities\cmd\cmd.c(1097): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  	printf("test!\r\n");
+..\Utilities\cmd\cmd.c(1114): warning:  #223-D: function "xTaskCreate" declared implicitly
+  	xTaskCreate(	(TaskFunction_t) cli_main_loop,
+..\Utilities\cmd\cmd.c(1116): warning:  #191-D: type qualifier is meaningless on cast type
+  					(const configSTACK_DEPTH_TYPE) FUN_CMD_TASK_STK_SIZE,
+..\Utilities\cmd\cmd.c(1120): warning:  #940-D: missing return statement at end of non-void function "fun_cmd_init" 
+  }
+..\Utilities\cmd\cmd.c: 41 warnings, 0 errors
+compiling commnad.c...
+..\Utilities\cmd\commnad.c(50): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  	printf ("\r\n%s\r\n", version_string);
+..\Utilities\cmd\commnad.c(274): warning:  #223-D: function "strcmp" declared implicitly
+  				if (strcmp (cmd_array[j]->name,
+..\Utilities\cmd\commnad.c(296): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			printf("%-*s- %s\r\n", CONFIG_SYS_HELP_CMD_WIDTH,
+..\Utilities\cmd\commnad.c(308): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			printf ("Unknown command '%s' - try 'help'"
+..\Utilities\cmd\commnad.c(367): warning:  #223-D: function "strchr" declared implicitly
+  	len = ((p = (const char *)strchr(cmd, '.')) == NULL) ? strlen (cmd) : (p - cmd);
+..\Utilities\cmd\commnad.c(367): warning:  #223-D: function "strlen" declared implicitly
+  	len = ((p = (const char *)strchr(cmd, '.')) == NULL) ? strlen (cmd) : (p - cmd);
+..\Utilities\cmd\commnad.c(375): warning:  #223-D: function "strncmp" declared implicitly
+  		if (strncmp (cmd, cmdtp->name, len) == 0) {
+..\Utilities\cmd\commnad.c(399): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  	printf("%s - %s\r\n\r\n", cmdtp->name, cmdtp->usage);
+..\Utilities\cmd\commnad.c(410): warning:  #2548-D: multicharacter character literal (potential portability problem)
+  	putc ('\r\n');
+..\Utilities\cmd\commnad.c(410): warning:  #69-D: integer conversion resulted in truncation
+  	putc ('\r\n');
+..\Utilities\cmd\commnad.c(497): warning:  #223-D: function "strchr" declared implicitly
+  	p = (const char *)strchr(cmd, '.');
+..\Utilities\cmd\commnad.c(499): warning:  #223-D: function "strlen" declared implicitly
+  		len = strlen(cmd);
+..\Utilities\cmd\commnad.c(506): warning:  #223-D: function "strlen" declared implicitly
+  		clen = strlen(cmdtp->name);
+..\Utilities\cmd\commnad.c(510): warning:  #223-D: function "memcmp" declared implicitly
+  		if (memcmp(cmd, cmdtp->name, len) != 0)
+..\Utilities\cmd\commnad.c(558): warning:  #223-D: function "strlen" declared implicitly
+  	int ll = leader != NULL ? strlen(leader) : 0;
+..\Utilities\cmd\commnad.c(563): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		puts("\r\n");
+..\Utilities\cmd\commnad.c(571): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			puts("\r\n");
+..\Utilities\cmd\commnad.c(576): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  			puts(sep);
+..\Utilities\cmd\commnad.c(577): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		puts(*argv++);
+..\Utilities\cmd\commnad.c(580): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  	printf("\r\n");
+..\Utilities\cmd\commnad.c(593): warning:  #223-D: function "strlen" declared implicitly
+  	len = strlen(anchor);
+..\Utilities\cmd\commnad.c(618): warning:  #223-D: function "strcmp" declared implicitly
+  	if (strcmp(prompt, CONFIG_SYS_PROMPT) != 0)
+..\Utilities\cmd\commnad.c(621): warning:  #223-D: function "strlen" declared implicitly
+  	cnt = strlen(buf);
+..\Utilities\cmd\commnad.c(628): warning:  #223-D: function "strcpy" declared implicitly
+  	strcpy(tmp_buf, buf);
+..\Utilities\cmd\commnad.c(680): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		puts(t - k);
+..\Utilities\cmd\commnad.c(688): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		puts(prompt);
+..\Utilities\cmd\commnad.c(701): warning:  #223-D: function "strlen" declared implicitly
+  	int len = strlen(arg);
+..\Utilities\cmd\commnad.c(729): warning:  #223-D: function "strlen" declared implicitly
+  	len = strlen(var);
+..\Utilities\cmd\commnad.c(737): warning:  #223-D: function "strchr" declared implicitly
+  		rval = (char *)strchr(lval, '=');
+..\Utilities\cmd\commnad.c(744): warning:  #223-D: function "memcmp" declared implicitly
+  		if (len > 0 && (vallen < len || memcmp(lval, var, len) != 0))
+..\Utilities\cmd\commnad.c(752): warning:  #223-D: function "memcpy" declared implicitly
+  		memcpy(buf, lval, vallen); buf += vallen; bufsz -= vallen;
+..\Utilities\cmd\commnad.c(768): warning:  #223-D: function "isxdigit" declared implicitly
+  		if ((*cp == 'x') && isxdigit(cp[1])) {
+..\Utilities\cmd\commnad.c(779): warning:  #223-D: function "isxdigit" declared implicitly
+  	while (isxdigit(*cp) && (value = isdigit(*cp) ? *cp-'0' : (islower(*cp)
+..\Utilities\cmd\commnad.c(779): warning:  #223-D: function "isdigit" declared implicitly
+  	while (isxdigit(*cp) && (value = isdigit(*cp) ? *cp-'0' : (islower(*cp)
+..\Utilities\cmd\commnad.c(779): warning:  #223-D: function "islower" declared implicitly
+  	while (isxdigit(*cp) && (value = isdigit(*cp) ? *cp-'0' : (islower(*cp)
+..\Utilities\cmd\commnad.c(780): warning:  #223-D: function "toupper" declared implicitly
+  	    ? toupper(*cp) : *cp)-'A'+10) < base) {
+..\Utilities\cmd\commnad.c(803): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  	printf ("\r\n\r\n%s\r\n\r\n", version_string);
+..\Utilities\cmd\commnad.c(846): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  	printf ("%2ld", n);
+..\Utilities\cmd\commnad.c(882): warning:  #223-D: function "cmd_uart_printf" declared implicitly
+  		printf("%08lx:", addr);
+..\Utilities\cmd\commnad.c(906): warning:  #223-D: function "isprint" declared implicitly
+  			putc(isprint(ucp[i]) && (ucp[i] < 0x80) ? ucp[i] : '.');
+..\Utilities\cmd\commnad.c(907): warning:  #2548-D: multicharacter character literal (potential portability problem)
+  		putc ('\r\n');
+..\Utilities\cmd\commnad.c(907): warning:  #69-D: integer conversion resulted in truncation
+  		putc ('\r\n');
+..\Utilities\cmd\commnad.c: 42 warnings, 0 errors
+compiling console.c...
+..\Utilities\cmd\console.c(16): warning:  #223-D: function "Delay" declared implicitly
+  			Delay(1);
+..\Utilities\cmd\console.c: 1 warning, 0 errors
+compiling env.c...
+..\Utilities\cmd\env.c(164): warning:  #223-D: function "puts" declared implicitly
+  	puts ("Using default environment\n\n");
+..\Utilities\cmd\env.c(189): warning:  #223-D: function "memset" declared implicitly
+  	memset(environment,0,sizeof(environment));
+..\Utilities\cmd\env.c(212): warning:  #223-D: function "memcpy" declared implicitly
+  	memcpy(environment, default_environment, sizeof(default_environment));
+..\Utilities\cmd\env.c(187): warning:  #177-D: variable "addr"  was declared but never referenced
+  	uint32 addr = 0;
+..\Utilities\cmd\env.c(188): warning:  #177-D: variable "tagPtr"  was declared but never referenced
+  	uint32 *tagPtr = NULL;
+..\Utilities\cmd\env.c(220): warning:  #177-D: variable "addr"  was declared but never referenced
+  	uint32 addr = 0;
+..\Utilities\cmd\env.c(221): warning:  #177-D: variable "tagPtr"  was declared but never referenced
+  	uint32 *tagPtr = NULL;
+..\Utilities\cmd\env.c(222): warning:  #177-D: variable "buffer"  was declared but never referenced
+  	uchar buffer[4] = {0};
+..\Utilities\cmd\env.c(223): warning:  #177-D: variable "rcode"  was declared but never referenced
+  	int rcode = 0;
+..\Utilities\cmd\env.c(224): warning:  #177-D: variable "rc"  was declared but never referenced
+  	int rc = 0;
+..\Utilities\cmd\env.c(130): warning:  #177-D: function "env_get_char_init"  was declared but never referenced
+  static uchar env_get_char_init (int index)
+..\Utilities\cmd\env.c: 11 warnings, 0 errors
+compiling cmd_spiffs.c...
+..\Utilities\cmd\cmd_spiffs.c(9): warning:  #223-D: function "sys_spiffs_ls" declared implicitly
+  	sys_spiffs_ls();
+..\Utilities\cmd\cmd_spiffs.c(21): warning:  #223-D: function "sys_spiffs_format" declared implicitly
+  	sys_spiffs_format();
+..\Utilities\cmd\cmd_spiffs.c: 2 warnings, 0 errors
+compiling spiffs_gc.c...
+compiling spiffs_cache.c...
+compiling spiffs_check.c...
+compiling spiffs_hydrogen.c...
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1902): warning:  #223-D: function "printf" declared implicitly
+  					spiffs_printf(_SPIPRIbl " ", bix);
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1906): warning:  #223-D: function "printf" declared implicitly
+  					spiffs_printf(" 	");
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1911): warning:  #223-D: function "printf" declared implicitly
+  					spiffs_printf(SPIFFS_TEST_VIS_FREE_STR);
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1915): warning:  #223-D: function "printf" declared implicitly
+  					spiffs_printf(SPIFFS_TEST_VIS_DELE_STR);
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1919): warning:  #223-D: function "printf" declared implicitly
+  					spiffs_printf(SPIFFS_TEST_VIS_INDX_STR(obj_id));
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1923): warning:  #223-D: function "printf" declared implicitly
+  					spiffs_printf(SPIFFS_TEST_VIS_DATA_STR(obj_id));
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1930): warning:  #223-D: function "printf" declared implicitly
+  					spiffs_printf("\n");
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1946): warning:  #223-D: function "printf" declared implicitly
+  			spiffs_printf("\tera_cnt: " _SPIPRIi "\n", erase_count);
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1950): warning:  #223-D: function "printf" declared implicitly
+  			spiffs_printf("\tera_cnt: N/A\n");
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c(1956): warning:  #223-D: function "printf" declared implicitly
+  	spiffs_printf("era_cnt_max: " _SPIPRIi "\n", fs->max_erase_count);
+..\Utilities\spiffs-0.3.7\src\spiffs_hydrogen.c: 10 warnings, 0 errors
+compiling lfs_util.c...
+compiling spiffs_nucleus.c...
+..\Utilities\spiffs-0.3.7\src\spiffs_nucleus.c(2221): warning:  #1293-D: assignment in condition
+    while ((c = name[i++]) && i < SPIFFS_OBJ_NAME_LEN) {
+..\Utilities\spiffs-0.3.7\src\spiffs_nucleus.c: 1 warning, 0 errors
+compiling lfs.c...
+..\Utilities\littlefs-master\lfs.c(2231): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "superblock"  (declared at line 2256)
+            variable "valid"  (declared at line 2273)
+          goto cleanup;
+          ^
+..\Utilities\littlefs-master\lfs.c(2239): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "superblock"  (declared at line 2256)
+            variable "valid"  (declared at line 2273)
+          goto cleanup;
+          ^
+..\Utilities\littlefs-master\lfs.c(2249): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "superblock"  (declared at line 2256)
+            variable "valid"  (declared at line 2273)
+          goto cleanup;
+          ^
+..\Utilities\littlefs-master\lfs.c(2331): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "major_version"  (declared at line 2358)
+            variable "minor_version"  (declared at line 2359)
+          goto cleanup;
+          ^
+..\Utilities\littlefs-master\lfs.c(2344): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "major_version"  (declared at line 2358)
+            variable "minor_version"  (declared at line 2359)
+              goto cleanup;
+              ^
+..\Utilities\littlefs-master\lfs.c(2355): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "major_version"  (declared at line 2358)
+            variable "minor_version"  (declared at line 2359)
+          goto cleanup;
+          ^
+..\Utilities\littlefs-master\lfs.c: 6 warnings, 0 errors
+linking...
+Program Size: Code=117084 RO-data=191348 RW-data=1664 ZI-data=107324  
+FromELF: creating hex file...
+After Build - User command #1: C:\Keil_v5\ARM\ARMCC\bin\fromelf.exe -bin -o H:\wujique\prog\stm32f407\prj\Objects\wujique.bin H:\wujique\prog\stm32f407\prj\Objects\wujique.axf
+Warning: Q3910W: Old syntax, please use '--bin'.
+"H:\wujique\prog\stm32f407\prj\Objects\wujique.axf": Error: Q0122E: Could not open file 'H:\wujique\prog\stm32f407\prj\Objects\wujique.axf': No such file or directory
+Finished: 0 information, 1 warning and 1 error messages.
+".\Objects\wujique.axf" - 0 Error(s), 295 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.12.0.pack
+                Keil.STM32F4xx_DFP.2.12.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\liaohuiooooo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:24
+</pre>
+</body>
+</html>

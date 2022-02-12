@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "DHT11.C": "cpp",
+        "bsp_uart.h": "c"
+    }
+}
