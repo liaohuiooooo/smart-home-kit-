@@ -7,7 +7,7 @@ float * AdcGetVal(void)
     uint8_t i = 0;
 
 
-    for(i=0; i<3; i++)
+    for(i=0; i<2; i++)
     {
         HAL_ADC_Start(&hadc1);
         HAL_ADC_PollForConversion(&hadc1, 0xffff);
@@ -20,7 +20,10 @@ float * AdcGetVal(void)
 
 void showMQX(float *arr)
 {
-    printf("ADC1 通道7: %.3f%% 通道8: %.3f%% 通道9: %.3f%%\n",\
-    arr[0],arr[1],arr[2]);
+    char mqtt_message[30];
+    printf("ADC7: %.3f%%\t 通道8: %.3f%%\t\n",arr[0],arr[1]);
+
+    sprintf(mqtt_message,"{\"MQ3\":%.3f, \"MQ7\":%.3f}",arr[0],arr[1]);
+	MQTT_PublishData(MQTT_PUBLISH_TOPIC,mqtt_message,0);
 }
 

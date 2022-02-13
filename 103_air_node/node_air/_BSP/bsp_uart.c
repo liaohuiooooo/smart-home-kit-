@@ -27,6 +27,18 @@ int fgetc(FILE *F){
     return (ch);
 }
 
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	if(huart == &huart2 )
+	{
+		Rx_String[Rx_Counter++] = Rx_Once[0];
+		HAL_UART_Receive_IT(&huart2, Rx_Once, 1);
+	}
+		
+}
+
+
+
  /**
  * @brief  DEBUG_USART6 GPIO 配置,工作模式配置。115200 8-N-1
  * @param  无

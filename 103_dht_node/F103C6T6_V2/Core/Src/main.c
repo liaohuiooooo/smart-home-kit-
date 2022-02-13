@@ -71,7 +71,7 @@ extern uint8_t Rx_Once[];
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(htim->Instance == TIM2)
 	{
-		
+		//定时器2暂未使用
 	}
 }
 

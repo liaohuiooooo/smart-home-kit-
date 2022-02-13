@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "main.h": "c"
+        "main.h": "c",
+        "mqx.h": "c",
+        "pm25.h": "c"
     }
 }

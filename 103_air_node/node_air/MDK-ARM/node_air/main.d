@@ -38,5 +38,8 @@ node_air\main.o: ..\_BSP\bsp_led.h
 node_air\main.o: ..\_BSP\bsp_uart.h
 node_air\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 node_air\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+node_air\main.o: ..\_WIFI\esp8266.h
 node_air\main.o: ..\_BSP\bsp_timer.h
+node_air\main.o: ..\_BSP\bsp_uart.h
 node_air\main.o: ..\_GP2Y1014AU\pm25.h
+node_air\main.o: ..\_MQTT\mqtt.h

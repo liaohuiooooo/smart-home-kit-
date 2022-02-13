@@ -39,3 +39,6 @@ node_air\pm25.o: ../Core/Inc/usart.h
 node_air\pm25.o: ..\_BSP\bsp_led.h
 node_air\pm25.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 node_air\pm25.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+node_air\pm25.o: ..\_WIFI\esp8266.h
+node_air\pm25.o: ..\_BSP\bsp_uart.h
+node_air\pm25.o: ..\_MQTT\mqtt.h

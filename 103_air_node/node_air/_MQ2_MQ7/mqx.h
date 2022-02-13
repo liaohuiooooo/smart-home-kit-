@@ -6,6 +6,7 @@
 #include "adc.h"
 #include "bsp_uart.h"
 
+#include "mqtt.h"
 
 
 float * AdcGetVal(void);

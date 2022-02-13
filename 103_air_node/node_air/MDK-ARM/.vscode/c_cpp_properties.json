@@ -11,6 +11,8 @@
                 "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\_BSP",
                 "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\_GP2Y1014AU",
                 "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\_MQ2_MQ7",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\_MQTT",
+                "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\_WIFI",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "d:\\Desktop\\STM32_WorkStation\\stm32\\_ProSmart\\smart\\103_air_node\\node_air\\MDK-ARM",

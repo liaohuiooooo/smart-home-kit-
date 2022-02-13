@@ -6,6 +6,7 @@
 #include "bsp_led.h"
 #include "stdio.h"
 #include "string.h"
+#include "esp8266.h"
 
 
   //UART6 引脚定义 波特率

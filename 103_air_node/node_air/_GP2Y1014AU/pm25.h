@@ -6,6 +6,7 @@
 #include "bsp_timer.h"
 #include "adc.h"
 #include "bsp_uart.h"
+#include "mqtt.h"
 
 #define PLED_ON     HAL_GPIO_WritePin(PM_LED_GPIO_Port, PM_LED_Pin, GPIO_PIN_SET)
 #define PLED_OFF     HAL_GPIO_WritePin(PM_LED_GPIO_Port, PM_LED_Pin, GPIO_PIN_RESET)

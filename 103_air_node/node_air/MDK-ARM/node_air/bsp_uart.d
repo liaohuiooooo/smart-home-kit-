@@ -35,3 +35,7 @@ node_air\bsp_uart.o: ../Core/Inc/main.h
 node_air\bsp_uart.o: ..\_BSP\bsp_led.h
 node_air\bsp_uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 node_air\bsp_uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+node_air\bsp_uart.o: ..\_WIFI\esp8266.h
+node_air\bsp_uart.o: ..\_BSP\bsp_timer.h
+node_air\bsp_uart.o: ../Core/Inc/tim.h
+node_air\bsp_uart.o: ..\_BSP\bsp_uart.h
