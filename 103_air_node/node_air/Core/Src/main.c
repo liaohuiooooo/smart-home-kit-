@@ -29,6 +29,8 @@
 #include "bsp_uart.h"
 #include "bsp_timer.h"
 #include "pm25.h"
+#include "esp8266.h"
+#include "mqtt.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -69,7 +71,8 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	
+	uint32_t counter = 0 ;
+  
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -94,21 +97,44 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM2_Init();
   MX_ADC2_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  //开启接收中断
+  HAL_UART_Receive_IT(&huart2, Rx_Once, 1);
+
+  ESP01S_CONNECT();
+  MQTT_CONNECTING();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  L_TOOGLE;
-    showMQX(AdcGetVal());
-		GetGP2Y();
-		HAL_Delay(1000);
-		
-	  
-	  
+    counter++; if(counter == 1000) counter = 0;
+    //5s发送一个心跳
+    if(counter % 50 == 0)
+    {
+      MQTT_SentHeart();
+    }
+
+    if(counter % 10 == 0)
+    {
+      
+    }
+    
+    if(counter % 5 == 0)
+    {
+      L_TOOGLE;
+    }
+
+    if(counter % 10 == 0)
+    {
+      showMQX(AdcGetVal());
+      GetGP2Y();
+    }
+  
+	  HAL_Delay(100);
 	  
 	  
     /* USER CODE END WHILE */
