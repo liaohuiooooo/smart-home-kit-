@@ -51,9 +51,9 @@
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
+osThreadId myTask01Handle;
 osThreadId myTask02Handle;
 osThreadId myTask03Handle;
-osThreadId myTask04Handle;
 osSemaphoreId myBinarySem01Handle;
 
 /* Private function prototypes -----------------------------------------------*/
@@ -62,9 +62,9 @@ osSemaphoreId myBinarySem01Handle;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
-void StartTask02(void const * argument);
-void StartTask03(void const * argument);
-void StartTask04(void const * argument);
+void LedStatus(void const * argument);
+void Display(void const * argument);
+void NetConnect(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -120,17 +120,17 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
+  /* definition and creation of myTask01 */
+  osThreadDef(myTask01, LedStatus, osPriorityLow, 0, 128);
+  myTask01Handle = osThreadCreate(osThread(myTask01), NULL);
+
   /* definition and creation of myTask02 */
-  osThreadDef(myTask02, StartTask02, osPriorityLow, 0, 128);
+  osThreadDef(myTask02, Display, osPriorityLow, 0, 128);
   myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
 
   /* definition and creation of myTask03 */
-  osThreadDef(myTask03, StartTask03, osPriorityLow, 0, 128);
+  osThreadDef(myTask03, NetConnect, osPriorityLow, 0, 128);
   myTask03Handle = osThreadCreate(osThread(myTask03), NULL);
-
-  /* definition and creation of myTask04 */
-  osThreadDef(myTask04, StartTask04, osPriorityLow, 0, 128);
-  myTask04Handle = osThreadCreate(osThread(myTask04), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -148,7 +148,53 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-  	#if 0
+  	
+	
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartDefaultTask */
+}
+
+/* USER CODE BEGIN Header_LedStatus */
+/**
+* @brief Function implementing the myTask01 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_LedStatus */
+void LedStatus(void const * argument)
+{
+  /* USER CODE BEGIN LedStatus */
+  uint8_t i = 0;
+  /* Infinite loop */
+  for(;;)
+  {
+    i++;
+	  L_TOOGLE;
+    if(i%10 == 0)
+    {
+      user_debug("系统运行正常");
+      i = 0;
+    }
+	  osDelay(1000);
+  }
+  /* USER CODE END LedStatus */
+}
+
+/* USER CODE BEGIN Header_Display */
+/**
+* @brief Function implementing the myTask02 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Display */
+void Display(void const * argument)
+{
+  /* USER CODE BEGIN Display */
+	#if 0
     LCD_Print(0, 0, "智能家居管理系统",TYPE16X16,TYPE8X16);    
     vTaskDelay(1000);	  
     LCD_CLS();
@@ -160,84 +206,37 @@ void StartDefaultTask(void const * argument)
     vTaskDelay(1000);
     LCD_CLS();
 	#endif
-	
   /* Infinite loop */
   for(;;)
   {
-    #if 1
+	  #if 1
       osDelay(1);
     #else
        Dis_Page(myStrPtr);
-	  osDelay(1000);
+	    osDelay(1000);
     #endif
+    osDelay(1);
   }
-  /* USER CODE END StartDefaultTask */
+  /* USER CODE END Display */
 }
 
-/* USER CODE BEGIN Header_StartTask02 */
-/**
-* @brief Function implementing the myTask02 thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask02 */
-void StartTask02(void const * argument)
-{
-  /* USER CODE BEGIN StartTask02 */
-  /* Infinite loop */
-  for(;;)
-  {
-	  user_debug("任务2： LED 翻转任务正在执行");
-	  L_TOOGLE;
-    osDelay(5000);
-    osSemaphoreRelease(myBinarySem01Handle);
-	  user_debug("发送二值信号量");
-  }
-  /* USER CODE END StartTask02 */
-}
-
-/* USER CODE BEGIN Header_StartTask03 */
+/* USER CODE BEGIN Header_NetConnect */
 /**
 * @brief Function implementing the myTask03 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask03 */
-void StartTask03(void const * argument)
+/* USER CODE END Header_NetConnect */
+void NetConnect(void const * argument)
 {
-  /* USER CODE BEGIN StartTask03 */
+  /* USER CODE BEGIN NetConnect */
   /* Infinite loop */
   for(;;)
   {
-    osDelay(200);
-	  if(osSemaphoreWait(myBinarySem01Handle, 0) == osOK)
-    {
-      user_debug("收到二值信号量");//与任务2信号量的释放同步
-    }
-    else{
-      user_debug("等待中...");
-    }
-	
-  }
-  /* USER CODE END StartTask03 */
-}
-
-/* USER CODE BEGIN Header_StartTask04 */
-/**
-* @brief Function implementing the myTask04 thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask04 */
-void StartTask04(void const * argument)
-{
-  /* USER CODE BEGIN StartTask04 */
-  /* Infinite loop */
-  for(;;)
-  {
+	  
     osDelay(1);
   }
-  /* USER CODE END StartTask04 */
+  /* USER CODE END NetConnect */
 }
 
 /* Private application code --------------------------------------------------*/

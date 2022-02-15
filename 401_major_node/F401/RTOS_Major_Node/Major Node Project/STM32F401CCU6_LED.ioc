@@ -1,8 +1,9 @@
 #MicroXplorer Configuration settings - do not modify
 FREERTOS.BinarySemaphores01=myBinarySem01,Dynamic,NULL
+FREERTOS.FootprintOK=true
 FREERTOS.INCLUDE_eTaskGetState=1
-FREERTOS.IPParameters=Tasks01,INCLUDE_eTaskGetState,BinarySemaphores01
-FREERTOS.Tasks01=defaultTask,0,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL;myTask02,-2,128,StartTask02,Default,NULL,Dynamic,NULL,NULL;myTask03,-2,128,StartTask03,Default,NULL,Dynamic,NULL,NULL;myTask04,-2,128,StartTask04,Default,NULL,Dynamic,NULL,NULL
+FREERTOS.IPParameters=Tasks01,INCLUDE_eTaskGetState,BinarySemaphores01,FootprintOK
+FREERTOS.Tasks01=defaultTask,0,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL;myTask01,-2,128,LedStatus,Default,NULL,Dynamic,NULL,NULL;myTask02,-2,128,Display,Default,NULL,Dynamic,NULL,NULL;myTask03,-2,128,NetConnect,Default,NULL,Dynamic,NULL,NULL
 File.Version=6
 GPIO.groupedBy=Group By Peripherals
 KeepUserPlacement=false
